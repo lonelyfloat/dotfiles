@@ -6,9 +6,9 @@ local function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-map('n', "<C-W>t", "<cmd>tabnew | terminal<CR> ")
+map('n', "<C-W>t", "<cmd>tabnew | terminal<CR>")
 
-map('t', "<Esc>", '<C-\\><C-N>')
+map('n', 'gs', "<cmd>Neogit<CR>")
 -- Telescope maps
 map('n', 'ff', "<cmd>Telescope find_files<CR>")
 map('n', 'fg', "<cmd>Telescope live_grep<CR>")
@@ -16,7 +16,7 @@ map('n', 'fb', "<cmd>Telescope buffers<CR>")
 map('n', 'fh', "<cmd>Telescope help_tags<CR>")
 
 -- LSP Maps
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -34,4 +34,3 @@ map('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 map('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 map('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 map('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-

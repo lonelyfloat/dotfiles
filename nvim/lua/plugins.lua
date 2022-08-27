@@ -1,5 +1,5 @@
 local plugins = {
-    -- discord presence
+   -- discord presence
     {settings={'andweeb/presence.nvim'}},
     -- lsp stuff
     {settings={'neovim/nvim-lspconfig'}},
@@ -14,7 +14,8 @@ local plugins = {
     {settings={'nvim-treesitter/nvim-treesitter'}},
     {settings={'neovimhaskell/haskell-vim'}},
     --color themes
-    --{['settings']={'ellisonleao/gruvbox.nvim'}},
+    {settings={'ellisonleao/gruvbox.nvim'}},
+    {settings={'Shatur/neovim-ayu'}},
     {settings={'Mofiqul/vscode.nvim'}},
     -- lualine
     {settings={'nvim-lualine/lualine.nvim',requires = { 'kyazdani42/nvim-web-devicons', opt = true }}},
@@ -24,7 +25,9 @@ local plugins = {
     {settings={'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }},
     {settings={'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, file='telescope'},
     -- java
-    {settings={'mfussenegger/nvim-jdtls'}, file='nvim-lspconfig'}
+    {settings={'mfussenegger/nvim-jdtls'}, file='nvim-lspconfig'},
+    -- git
+    {settings={ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }},
 }
 
 require('pluginpacker').setup(plugins)

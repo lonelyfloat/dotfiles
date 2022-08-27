@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/lonelyfloat/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/lonelyfloat/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   ["haskell-vim"] = {
     loaded = true,
     path = "/home/lonelyfloat/.local/share/nvim/site/pack/packer/start/haskell-vim",
@@ -98,6 +103,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lonelyfloat/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/lonelyfloat/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/home/lonelyfloat/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
   },
   ["nvim-cmp"] = {
     loaded = true,

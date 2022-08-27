@@ -1,5 +1,3 @@
--- nvim-jdtls: https://github.com/mfussenegger/nvim-jdtls
--- I stole this config from the quickstart, if you don't use java this is useless
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local jdtls_path = '/home/lonelyfloat/.local/share/nvim/lsp_servers/jdtls'
 local capabilities = vim.lsp.protocol.make_client_capabilities()
