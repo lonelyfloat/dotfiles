@@ -8,4 +8,5 @@ set.termguicolors = true
 set.number = true
 set.cursorline = true
 set.relativenumber = true
--- TODO: Replace this with something less bad
+set.clipboard = "unnamedplus"
+vim.cmd "colorscheme vscode"

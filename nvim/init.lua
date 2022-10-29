@@ -1,4 +1,5 @@
-require('opts')
-require('plugins')
 require('autogroups')
+require('plugins')
 require('maps')
+require('cmds')
+require('opts')

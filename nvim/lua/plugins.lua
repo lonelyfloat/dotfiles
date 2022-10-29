@@ -1,33 +1,36 @@
-local plugins = {
-   -- discord presence
-    {settings={'andweeb/presence.nvim'}},
-    -- lsp stuff
-    {settings={'neovim/nvim-lspconfig'}},
-    {settings={'williamboman/nvim-lsp-installer'},['file']='nvim-lspconfig'},
-    --autocomplete
-    {settings={'hrsh7th/nvim-cmp'},        },
-    {settings={'hrsh7th/cmp-nvim-lsp'},    file='nvim-cmp'},
-    {settings={'L3MON4D3/LuaSnip'},        file='nvim-cmp'},
-    {settings={'saadparwaiz1/cmp_luasnip'},file='nvim-cmp'},
-    {settings={'onsails/lspkind-nvim'},    file='nvim-cmp'},
-    -- syntax highlighting lol
-    {settings={'nvim-treesitter/nvim-treesitter'}},
-    {settings={'neovimhaskell/haskell-vim'}},
-    --color themes
-    {settings={'ellisonleao/gruvbox.nvim'}},
-    {settings={'Shatur/neovim-ayu'}},
-    {settings={'Mofiqul/vscode.nvim'}},
-    -- lualine
-    {settings={'nvim-lualine/lualine.nvim',requires = { 'kyazdani42/nvim-web-devicons', opt = true }}},
-    -- tree
-    --{settings={'preservim/nerdtree'}},
-    -- telescope
-    {settings={'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }},
-    {settings={'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, file='telescope'},
-    -- java
-    {settings={'mfussenegger/nvim-jdtls'}, file='nvim-lspconfig'},
-    -- git
-    {settings={ 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }},
-}
-
-require('pluginpacker').setup(plugins)
+require('pluginpacker')
+-- discord presence
+use 'andweeb/presence.nvim'
+-- lsp stuff
+use 'neovim/nvim-lspconfig'
+use({'williamboman/nvim-lsp-installer'}, true)
+--autocomplete
+use 'hrsh7th/nvim-cmp'
+use('hrsh7th/cmp-nvim-lsp', true)
+use('L3MON4D3/LuaSnip', true)
+use('saadparwaiz1/cmp_luasnip', true)
+use('onsails/lspkind-nvim', true)
+-- syntax highlighting lol
+use 'nvim-treesitter/nvim-treesitter'
+use 'neovimhaskell/haskell-vim'
+-- lualine
+use {'nvim-lualine/lualine.nvim',requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+-- telescope
+use {'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }}
+use({'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, true)
+-- java
+use('mfussenegger/nvim-jdtls', true)
+-- git
+use {'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+-- utils
+use('Vonr/align.nvim', true)
+use('tpope/vim-sensible', true)
+use('kbenzie/vim-spirv', true)
+use({ 'seblj/nvim-tabline', requires = { 'kyazdani42/nvim-web-devicons' } })
+--color themes
+use 'ellisonleao/gruvbox.nvim'
+use 'Shatur/neovim-ayu'
+use 'Mofiqul/vscode.nvim'
+use 'marko-cerovac/material.nvim'
+use('novakne/kosmikoa.nvim', true)
+setup()
